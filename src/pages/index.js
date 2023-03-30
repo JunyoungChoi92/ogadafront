@@ -25,7 +25,7 @@ export default function Home() {
                     justifyContent: "center",
                 }}
             >
-                <Weather />
+                {/* <Weather /> */}
                 <BoxGroup />
             </div>
         </>
