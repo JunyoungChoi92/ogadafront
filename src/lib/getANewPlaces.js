@@ -31,7 +31,7 @@ export default async function getANewPlaces(
             }
         });
     });
-    
+
     // The function then shuffles the places in each category and adds them to the "shuffledPlaces" array.
     [culture, cafe, restaurant] = [culture, cafe, restaurant].map((places) => {
         return shuffle(places);
@@ -60,18 +60,22 @@ export default async function getANewPlaces(
 
     const markers = [];
     const urls = [];
-    
+
     // crawling function is called with the "urls" array as an argument and returns the crawled data following by urls.
     const crawling = async (urls) => {
         return await axios
-            .post(`${process.env.NEXT_PUBLIC_BACKEND_API}/crawling`, {
-                data: urls,
-            })
+            .post(
+                `${process.env.NEXT_PUBLIC_BACKEND_API}/crawling`,
+                {
+                    data: urls,
+                },
+                { method: "POST" }
+            )
             .then((res) => {
                 return res.data;
             });
     };
-    
+
     // manufacture crawled data for setting markers, urls, prompts, and newCrawledData, and return them.
     shuffledPlaces.forEach((places) => {
         let tempMarker = [];
