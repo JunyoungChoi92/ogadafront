@@ -68,7 +68,7 @@ const CourseBox = forwardRef((props, ref) => {
             inline: "nearest",
         });
     }
-    
+
     // removeACourse function is used to remove the course.
     function removeACourse(index) {
         if (markersList.length === 1) {
@@ -270,7 +270,7 @@ const CourseBox = forwardRef((props, ref) => {
 
                                                             const res =
                                                                 await axios.post(
-                                                                    `${process.env.NEXT_PUBLIC_BACKEND_API}/course/save`,
+                                                                    `${process.env.NEXT_PUBLIC_BACKEND_API}course/save`,
                                                                     {
                                                                         dateCourse,
                                                                     }
@@ -285,9 +285,6 @@ const CourseBox = forwardRef((props, ref) => {
                                                             } else {
                                                                 alert(
                                                                     "코스 저장에 실패했습니다."
-                                                                );
-                                                                console.log(
-                                                                    res
                                                                 );
                                                             }
                                                         }}
