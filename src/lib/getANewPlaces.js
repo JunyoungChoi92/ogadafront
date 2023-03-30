@@ -65,7 +65,7 @@ export default async function getANewPlaces(
     const crawling = async (urls) => {
         return await axios
             .post(
-                `${process.env.NEXT_PUBLIC_BACKEND_API}/crawling`,
+                `${process.env.NEXT_PUBLIC_BACKEND_API}crawling`,
                 {
                     data: urls,
                 },
