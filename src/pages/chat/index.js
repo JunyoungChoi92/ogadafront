@@ -5,7 +5,7 @@ import AskQuestion from "@/components/chat/AskQuestionBox";
 import ChatBox from "@/components/chat/ChatBox";
 import CourseBox from "@/components/chat/CourseBox";
 import Mapper from "@/components/chat/Mapper";
-import DateRecommendationBox from "@/components/chat/DateRecommendationBox";
+import DateRecommendationBox from "@/components/chat/dateRecommendationBox";
 import ShowAddress from "@/components/chat/ShowAddress";
 
 const Chat = () => {
